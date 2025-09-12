@@ -1,0 +1,94 @@
+.footerContainer {
+  width: 100%;
+  height: 100%;
+  padding: 100px 5% 50px 5%;
+  background-color: var(--tertiary-background-color);
+  color: var(--secondary-text-color);
+}
+
+.footerMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footerMain > .jobSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerMain > .jobSection > .jobSectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.footerMain span {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.footerMain > .listsSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footerMain > .listsSection ul {
+  list-style: none;
+}
+
+.footerMain > .listsSection li {
+    color: var(--secondary-text-shaded-color);
+    cursor: pointer;
+}
+
+.footerMain > .listsSection li:hover {
+    text-decoration: underline;
+}
+
+.footerMain > .listsSection > .companySection, .categoriesSection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerMain > .newsSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerMain > .newsSection input{
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--tertiary-background-color);
+    border: 1px solid var(--secondary-text-shaded-color);
+    padding: 5px 10px;
+    color: var(--secondary-text-shaded-color);
+}
+
+.footerMain > .newsSection button{
+    background-color: var(--primary-contrast-color);
+    color: var(--secondary-text-color);
+}
+
+.footerMain > .newsSection button:hover{
+    transform: scale(1.01);
+}
+
+.footerBottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footerBottom a{
+    color: var(--secondary-text-color);
+    margin-left: 20px;
+}
+
+.footerBottom a:hover{
+    text-decoration: underline;
+}

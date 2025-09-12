@@ -1,0 +1,123 @@
+.heroContainer {
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+  background: url("/hero.png") center center no-repeat;
+  background-size: cover;
+}
+
+.heroContainer > .contentContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 90%;
+  margin: auto;
+  color: var(--secondary-text-color);
+}
+
+.heroHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heroHeader > h1 {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.heroHeader > h4 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--secondary-text-shaded-color);
+}
+
+.heroSearchSection {
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--secondary-text-color);
+}
+
+.heroSearchSection > input {
+  width: 250px;
+  padding: 0 10px 0 20px;
+}
+
+.heroSearchSection > select {
+  min-width: 150px;
+  cursor: pointer;
+  border: none;
+  height: 40px;
+  border-left: 0.5px solid;
+  padding: 0 10px;
+  outline: none;
+  text-overflow: ellipsis;
+}
+
+.heroSearchSection > select > option {
+  text-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.heroSearchSection button{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 100%;
+  background-color: var(--primary-contrast-color);
+  color: var(--secondary-text-color);
+  border-radius: 0 10px 10px 0;
+}
+
+.heroStatsSection{
+  display: flex;
+  gap: 100px;
+}
+
+.heroStats{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.heroStats > .iconContainer{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-contrast-color);
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroStats > .txtContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.heroStats > .txtContainer > .statsNumbers{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+@media(width>2000px){
+  .heroContainer{
+    height: 1000px;
+  }
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --primary-background-color: #f5f5f5;
+  --secondary-background-color: #ffffff;
+  --secondary-background-color-hover: #f2f2f2;
+  --tertiary-background-color: #000000;
+  --primary-text-color: #000000;
+  --secondary-text-color: #ffffff;
+  --secondary-text-shaded-color: #bcbcbc;
+  --primary-contrast-color: #309689;
+  --primary-contrast-color-light: hsl(164, 60%, 95%);
+  --primary-contrast-color-hover: #216a60;
+}
+
+/* Global Styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+a {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+input,
+select,
+option {
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+
+/* Global Media Queries */
+.contentContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 2000px) {
+  .contentContainer {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2700px) {
+  .contentContainer {
+    width: 50%;
+  }
+}
+
+@media (min-width: 4000px) {
+  .contentContainer {
+    width: 34%;
+  }
+}
+
+@media (min-width: 4500px) {
+  .contentContainer {
+    width: 25%;
+  }
+}

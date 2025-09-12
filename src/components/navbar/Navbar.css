@@ -1,0 +1,44 @@
+.navContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 5%;
+  margin: 0 auto;
+  height: 80px;
+  color: var(--secondary-text-color);
+}
+
+.navContainer > .contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-text-color);
+}
+
+.navLinksSection {
+  padding: 0 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.navButtons > .navloginBtn {
+  background: none;
+  color: var(--secondary-text-color);
+}
+
+.navButtons > .navRegBtn {
+  color: var(--secondary-text-color);
+  background-color: var(--primary-contrast-color);
+}
+
+.navButtons > .navRegBtn:hover {
+  background-color: var(--primary-contrast-color-hover);
+}
