@@ -1,8 +1,9 @@
-import { BsBookmarkPlus } from "react-icons/bs";
+import { BsBookmarkCheckFill, BsBookmarkPlus } from "react-icons/bs";
 import "./JobCard.css";
 import { FiBriefcase, FiClock, FiCreditCard, FiMapPin } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { formatDistanceToNow } from "date-fns";
+import { savedJobs } from "../../data/savedJobs";
 
 const JobCard = ({ job }) => {
   const tagsOptions = [
@@ -19,9 +20,12 @@ const JobCard = ({ job }) => {
             <span>
               {formatDistanceToNow(new Date(job.postedAt), { addSuffix: true })}
             </span>
-
             <div className="saveJobIconContainer" title="Save this Job">
-              <BsBookmarkPlus />
+              {savedJobs.includes(job.id) ? (
+                <BsBookmarkCheckFill />
+              ) : (
+                <BsBookmarkPlus />
+              )}
             </div>
           </div>
           <div className="jobCardPosition">

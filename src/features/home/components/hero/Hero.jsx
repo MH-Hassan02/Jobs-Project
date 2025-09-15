@@ -33,8 +33,8 @@ const Hero = () => {
         </div>
         <div className="heroSearchSection">
           <input type="text" placeholder="Job Title or Company" />
-          <select id="location">
-            <option selected disabled>
+          <select defaultValue={"Select Location"}>
+            <option disabled value={"Select Location"}>
               Select Location
             </option>
             {locationOptions.map((option) => {
@@ -45,8 +45,8 @@ const Hero = () => {
               );
             })}
           </select>
-          <select>
-            <option selected disabled>
+          <select defaultValue={"Select Category"}>
+            <option disabled defaultValue={"Select Category"}>
               Select Category
             </option>
             {categoryOptions.map((option) => {

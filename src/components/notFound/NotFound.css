@@ -1,0 +1,5 @@
+.notFoundContainer {
+  background-color: var(--tertiary-background-color);
+  color: var(--secondary-background-color);
+  padding: 80px 5%;
+}
