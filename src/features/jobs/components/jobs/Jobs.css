@@ -1,0 +1,52 @@
+.jobsContainerHome {
+  width: 100%;
+  padding: 50px 10% 50px 10%;
+  background-color: var(--primary-background-color);
+}
+
+.jobsContainerHome > .contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.jobsContainerHome .jobsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jobsContainerHome .jobsHeader > h1 {
+  font-weight: 600;
+}
+
+.jobsContainerHome .jobsHeader > a {
+  text-decoration: underline;
+  color: var(--primary-contrast-color);
+  font-size: 20px;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.jobList > a {
+  color: var(--primary-text-color);
+}
+
+.jobList > a:hover {
+  transform: scale(1.01);
+}
+
+.jobList > .loadMoreBtn {
+  background-color: var(--primary-contrast-color);
+  color: var(--secondary-text-color);
+  width: 200px;
+  margin: auto;
+}
+
+.jobList > .loadMoreBtn:hover {
+  background-color: var(--primary-contrast-color-hover);
+}

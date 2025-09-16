@@ -1,14 +1,14 @@
-import Hero from "../features/home/components/hero/Hero"
-import Jobs from "../features/home/components/jobs/Jobs"
+import Hero from "../components/hero/Hero";
+import Jobs from "../features/jobs/components/jobs/Jobs";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Jobs header={"Recent Jobs Available"} />
-      <Jobs header={"Saved Jobs"} />
+      <Jobs type={"recentJobs"} />
+      <Jobs type={"savedJobs"} />
     </>
   );
-}
+};
 
-export default Home
+export default Home;

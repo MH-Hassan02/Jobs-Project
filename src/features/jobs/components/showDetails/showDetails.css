@@ -1,0 +1,39 @@
+.detailsContainer {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.detailsContainer h1 {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 30px 0 20px 0;
+}
+
+.detailsContainer p {
+  font-size: 14px;
+}
+
+.detailsContainer ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.detailsContainer ul li:before {
+  content: "✓";
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.detailTag {
+  display: flex;
+  gap: 30px;
+}
+
+.detailTag > label {
+  background-color: var(--primary-contrast-color-light);
+  color: var(--primary-contrast-color);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}

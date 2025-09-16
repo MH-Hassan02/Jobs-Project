@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-align: center;
 }
 
 .heroHeader > h1 {
@@ -78,6 +79,10 @@
   background-color: var(--primary-contrast-color);
   color: var(--secondary-text-color);
   border-radius: 0 10px 10px 0;
+}
+
+.heroSearchSection button:hover{
+  background-color: var(--primary-contrast-color-hover);
 }
 
 .heroStatsSection{

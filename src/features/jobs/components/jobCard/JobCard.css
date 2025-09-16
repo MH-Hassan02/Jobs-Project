@@ -1,16 +1,23 @@
 .jobCardContainer {
-  height: 100%;
+  /* height: 100%; */
+  max-height: 400px;
   padding: 30px 0;
   background-color: var(--secondary-background-color);
   border-radius: 20px;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.jobCardContainer.expanded {
+  max-height: 1200px;
 }
 
 .jobCardContent {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 
 .jobCardHeader {
@@ -60,7 +67,8 @@
 
 .tagsContainer {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 10px 30px;
   font-size: 24px;
   color: var(--primary-contrast-color);
 }
@@ -74,4 +82,20 @@
 .tagDetail > label {
   color: var(--primary-text-color);
   font-size: 16px;
+}
+
+.jobCardContent > .applyBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.jobCardContent > .applyBtnContainer > button {
+  background-color: var(--primary-contrast-color);
+  color: var(--secondary-text-color);
+}
+
+.jobCardContent > .applyBtnContainer > button:hover {
+  background-color: var(--primary-contrast-color-hover);
 }
