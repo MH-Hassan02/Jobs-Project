@@ -69,8 +69,8 @@ const JobCard = ({ job }) => {
               {tagsOptions.map((tag) => {
                 return (
                   <>
-                    {tag.icon}
                     <div className="tagDetail">
+                      {tag.icon}
                       <label>{tag.label}</label>
                     </div>
                   </>

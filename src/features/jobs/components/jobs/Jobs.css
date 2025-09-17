@@ -1,6 +1,6 @@
 .jobsContainerHome {
   width: 100%;
-  padding: 50px 10% 50px 10%;
+  padding: 40px 10%;
   background-color: var(--primary-background-color);
 }
 
@@ -14,16 +14,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .jobsContainerHome .jobsHeader > h1 {
   font-weight: 600;
+  color: var(--primary-text-color);
 }
 
 .jobsContainerHome .jobsHeader > a {
   text-decoration: underline;
   color: var(--primary-contrast-color);
   font-size: 20px;
+  width: 100px;
 }
 
 .jobList {
@@ -49,4 +52,25 @@
 
 .jobList > .loadMoreBtn:hover {
   background-color: var(--primary-contrast-color-hover);
+}
+
+@media (max-width:768px){
+  .jobsContainerHome {
+    padding: 30px 10%;
+  }
+.jobsContainerHome .jobsHeader > h1 {
+  font-size: 24px;
+}
+.jobsContainerHome .jobsHeader > a {
+  font-size: 16px;
+}
+}
+
+@media (max-width: 425px) {
+  .jobsContainerHome {
+    padding: 20px 10px;
+  }
+  .jobList{
+    gap: 40px;
+  }
 }

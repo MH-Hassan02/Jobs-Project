@@ -42,7 +42,8 @@ const Hero = () => {
     }));
   };
 
-  const searchHandler = () => {
+  const searchHandler = (event) => {
+    event.preventDefault()
     if (searchValue) {
       const params = new URLSearchParams();
       for (let key in searchValue) {
@@ -59,7 +60,7 @@ const Hero = () => {
           <h1>Find Your Dream Job Today!</h1>
           <h4>Connecting Talent with Opportunity: Your Gateway to Success</h4>
         </div>
-        <div className="heroSearchSection">
+        <form onSubmit={searchHandler} className="heroSearchSection">
           <input
             type="text"
             placeholder="Job Title or Company"
@@ -99,11 +100,11 @@ const Hero = () => {
               );
             })}
           </select>
-          <button onClick={searchHandler}>
+          <button>
             <FaSearch />
             Search Job
           </button>
-        </div>
+        </form>
         <div className="heroStatsSection">
           {statsOptions.map((option, index) => {
             return (

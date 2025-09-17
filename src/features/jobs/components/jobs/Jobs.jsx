@@ -13,23 +13,27 @@ const Jobs = ({ type }) => {
   const [searchParams] = useSearchParams();
   const [jobsCount, setJobsCount] = useState(5);
   const location = useLocation();
-  const state= location?.state?.type
+  const state = location?.state?.type;
   let jobsToDisplay = [];
   let header = "";
 
+  // Search Query Handling
   if (searchParams.size > 0) {
     const searchDesc = searchParams.get("desc").toLowerCase();
     const searchLocation = searchParams.get("location").toLowerCase();
     const searchCategory = searchParams.get("category").toLowerCase();
-
     const searchQuery = {
-      desc: searchDesc,
-      location: searchLocation,
-      category: searchCategory,
+      desc: searchDesc || "",
+      location: searchLocation || "",
+      category: searchCategory || "",
     };
-
     jobsToDisplay = searchedJobs(searchQuery);
-    header = "Search Results";
+    const searchBreakdown = [
+      searchQuery.desc,
+      searchQuery.location,
+      searchQuery.category,
+    ].filter(Boolean);
+    header = `Search Results: ${searchBreakdown.join(", ")}`;
   } else if (type === "recentJobs") {
     jobsToDisplay = sortedJobsAscending();
     header = "Recent Jobs Available";

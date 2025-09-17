@@ -69,7 +69,7 @@
   overflow: hidden;
 }
 
-.heroSearchSection button{
+.heroSearchSection button {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -81,16 +81,16 @@
   border-radius: 0 10px 10px 0;
 }
 
-.heroSearchSection button:hover{
+.heroSearchSection button:hover {
   background-color: var(--primary-contrast-color-hover);
 }
 
-.heroStatsSection{
+.heroStatsSection {
   display: flex;
   gap: 100px;
 }
 
-.heroStats{
+.heroStats {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -98,7 +98,7 @@
   margin-top: 50px;
 }
 
-.heroStats > .iconContainer{
+.heroStats > .iconContainer {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -109,20 +109,75 @@
   align-items: center;
 }
 
-.heroStats > .txtContainer{
+.heroStats > .txtContainer {
   display: flex;
   flex-direction: column;
 }
 
-.heroStats > .txtContainer > .statsNumbers{
+.heroStats > .txtContainer > .statsNumbers {
   font-size: 20px;
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+  .heroContainer {
+    padding-top: 120px;
+  }
+  .heroSearchSection {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: start;
+    overflow: auto;
+    gap: 0;
+  }
 
+  .heroSearchSection > input {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid var(--secondary-text-shaded-color);
+  }
 
-@media(width>2000px){
-  .heroContainer{
-    height: 1000px;
+  .heroSearchSection > select {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    border: none;
+    border-bottom: 1px solid var(--secondary-text-shaded-color);
+    appearance: none;
+    text-align: center;
+  }
+
+  .heroSearchSection button {
+    width: 90%;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHeader > h1 {
+    font-size: 40px;
+  }
+  .heroContainer {
+    height: 100%;
+    padding-bottom: 80px;
+  }
+  .heroSearchSection{
+    width: 80%;
+  }
+  .heroStatsSection {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .heroHeader > h1 {
+    font-size: 32px;
+  }
+  .heroSearchSection{
+    width: 100%;
   }
 }
