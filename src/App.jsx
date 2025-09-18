@@ -9,7 +9,7 @@ import AppRoutes from "./pages/routes/AppRoutes";
 function App() {
   return (
     <>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Navbar />
       <Suspense fallback={<Loader />}>
         <AppRoutes />
