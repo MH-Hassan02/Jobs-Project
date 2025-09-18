@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { formatDistanceToNow } from "date-fns";
 import { savedJobsID } from "../../data/savedJobs";
 import { useState } from "react";
-import ShowDetails from "../showDetails/showDetails";
+import ShowDetails from "../showDetails/ShowDetails";
 
 const JobCard = ({ job }) => {
   const [savedJobs, setSavedJobs] = useState(savedJobsID);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showJobDetails, setShowJobDetails] = useState(false);
   const tagsOptions = [
     { label: job.category, icon: <FiBriefcase /> },
     { label: job.jobType, icon: <FiClock /> },
@@ -34,10 +34,10 @@ const JobCard = ({ job }) => {
 
   return (
     <Link
-      title={showDetails ? "Hide Job Details" : "View Job Details"}
-      onClick={() => setShowDetails(!showDetails)}
+      title={showJobDetails ? "Hide Job Details" : "View Job Details"}
+      onClick={() => setShowJobDetails(!showJobDetails)}
     >
-      <div className={`jobCardContainer ${showDetails ? "expanded" : ""}`}>
+      <div className={`jobCardContainer ${showJobDetails ? "expanded" : ""}`}>
         <div className="jobCardContent">
           <div className="jobCardHeader">
             <span>
@@ -79,8 +79,7 @@ const JobCard = ({ job }) => {
             </div>
           </div>
 
-          {showDetails && <ShowDetails job={job} />}
-
+          {showJobDetails && <ShowDetails job={job} />}
           <div className="applyBtnContainer">
             <button>Apply Here</button>
           </div>
