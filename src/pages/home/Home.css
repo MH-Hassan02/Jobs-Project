@@ -1,0 +1,19 @@
+.sectionChangeBtn {
+  background-color: var(--primary-background-color);
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+gap: 20px;
+}
+
+.sectionChangeBtn > a {
+  color: var(--primary-text-color);
+  padding: 15px 20px;
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+}
+
+.sectionChangeBtn .linkActive {
+  background-color: var(--primary-contrast-color);
+  color: var(--secondary-text-color);
+}

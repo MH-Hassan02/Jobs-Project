@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,10 +14,20 @@ const Navbar = () => {
             </div>
           </Link>
           <div className="navLinksSection">
-            <Link to="/">Home</Link>
-            <Link to="/jobs">Jobs</Link>
-            <Link>About</Link>
-            <Link>Contact</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "linkActive" : "")}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/jobs"
+              className={({ isActive }) => (isActive ? "linkActive" : "")}
+            >
+              Jobs
+            </NavLink>
+            <NavLink>About</NavLink>
+            <NavLink>Contact</NavLink>
           </div>
           <div className="navButtons">
             <button className="navloginBtn">Login</button>

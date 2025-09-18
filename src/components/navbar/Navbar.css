@@ -33,6 +33,11 @@
   color: var(--secondary-text-color);
 }
 
+.navLinksSection > .linkActive{
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .navButtons > .navloginBtn {
   background: none;
   color: var(--secondary-text-color);

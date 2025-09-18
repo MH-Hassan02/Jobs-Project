@@ -1,13 +1,13 @@
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { jobsData } from "../../data/jobsData";
 import "./Jobs.css";
-import JobCard from "../jobCard/JobCard";
 import {
   savedJobs,
   searchedJobs,
   sortedJobsAscending,
 } from "../../data/dataFiltered";
 import { useState } from "react";
+import JobList from "../jobList/JobList";
 
 const Jobs = ({ type }) => {
   const [searchParams] = useSearchParams();
@@ -53,25 +53,13 @@ const Jobs = ({ type }) => {
     <>
       <div className="jobsContainerHome">
         <div className="contentContainer">
-          <div className="jobsHeader">
-            <h1>{header}</h1>
-            {type === "recentJobs" && <Link to="/jobs">View all</Link>}
-            {type === "savedJobs" && (
-              <Link to="/jobs" state={{ type: "savedJobs" }}>
-                View all
-              </Link>
-            )}
-          </div>
-          <div className="jobList">
-            {jobsToDisplay.slice(0, jobsCount).map((job) => (
-              <JobCard key={job.id} job={job} />
-            ))}
-            {jobsCount < jobsToDisplay.length && location.pathname !== "/" && (
-              <button onClick={loadMoreHandler} className="loadMoreBtn">
-                Load More
-              </button>
-            )}
-          </div>
+          <JobList
+            jobsToDisplay={jobsToDisplay}
+            jobsCount={jobsCount}
+            header={header}
+            type={type}
+            loadMoreHandler={loadMoreHandler}
+          />
         </div>
       </div>
     </>

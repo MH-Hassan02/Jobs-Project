@@ -1,0 +1,30 @@
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.jobList > a {
+  color: var(--primary-text-color);
+}
+
+.jobList > a:hover {
+  transform: scale(1.01);
+}
+
+.jobList > .loadMoreBtn {
+  background-color: var(--primary-contrast-color);
+  color: var(--secondary-text-color);
+  width: 200px;
+  margin: auto;
+}
+
+.jobList > .loadMoreBtn:hover {
+  background-color: var(--primary-contrast-color-hover);
+}
+
+@media (max-width: 425px) {
+  .jobList {
+    gap: 40px;
+  }
+}

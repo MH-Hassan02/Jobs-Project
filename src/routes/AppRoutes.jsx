@@ -1,0 +1,24 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "../pages/home/Home";
+import Jobs from "../features/jobs/components/jobs/Jobs";
+import NotFound from "../components/notFound/NotFound";
+import { lazy } from "react";
+
+const JobPage = lazy(() => import("../pages/JobPage"));
+
+const AppRoutes = () => {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route index element={<Jobs type="recentJobs" />} />
+          <Route path="saved" element={<Jobs type="savedJobs" />} />
+        </Route>
+        <Route path="/jobs" element={<JobPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
+  );
+};
+
+export default AppRoutes;
